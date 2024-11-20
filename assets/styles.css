@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Soft-Cyan-Full-Slider-Bar: hsl(174, 77%, 80%);
+    --Strong-Cyan-Slider-Backround: hsl(174, 84%, 39%);
+    --StrongCyan-Slider-Backround-2: hsl(174, 86%, 45%);
+    --Light-Grayish-Red-Discount-Background: hsl(14, 92%, 95%);
+    --Light-Red-Discount-Text: hsl(15, 100%, 70%);
+    --White-Pricing-Component-Background: hsl(0, 0%, 100%);
+    --Grayish-Blue-Text: hsl(225, 20%, 60%);
+    --Dark-Desaturated-Blue-Text-CTA-Background: hsl(227, 35%, 25%);
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: space-evenly;
+    align-items: center;
+    background: url(images/bg-pattern.svg) no-repeat;
+    position: relative;
+    background-size: contain;
+}
+
+.main-head-absolute {
+    /* position: absolute; */
+    /* top: 30px;
+left: 0px; */
+    width: 100%;
+    padding-block: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin: auto; */
+    right: 0px;
+}
+
+.main-head-relative {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    height: 150px;
+    text-align: center;
+}
+
+.main-head-relative .img {
+    position: absolute;
+    top: 0px;
+    z-index: -1;
+    /* height: 100%; */
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.simpleHead {
+    font-weight: 900;
+    font-size: 2rem;
+    color: var(--Dark-Desaturated-Blue-Text-CTA-Background);
+
+}
+
+.Sign-upPAra {
+    color: var(--Grayish-Blue-Text);
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+main {
+
+    border-radius: 7px;
+    background-color: var(--White-Pricing-Component-Background);
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    /* padding: 20px; */
+    width: 45%;
+    padding-block: 40px;
+    box-shadow: 0px 10px 30px hsla(227, 35%, 25%, 0.123);
+}
+
+.views {
+    padding: 20px;
+    font-weight: 800;
+    color: var(--Grayish-Blue-Text);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.progress-container {
+    width: 70%;
+    height: 8px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    position: relative;
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+.progress-bar {
+    height: 8px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 16%;
+    background-color: var(--Soft-Cyan-Full-Slider-Bar);
+    border-radius: 10px;
+    transition: width 0.1s ease;
+}
+
+.hover-div {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    box-shadow: 0px 0px 20px var(--StrongCyan-Slider-Backround-2);
+    background-color: var(--Strong-Cyan-Slider-Backround);
+    border-radius: 50%;
+
+    justify-content: center;
+    pointer-events: none;
+    align-items: center;
+    transform: translate(0%, 0%);
+    /* top: -10px; */
+    display: none;
+    /* Initially hidden */
+}
+
+/* .hover-div img{
+    height: 50%;
+    width: 50%;
+} */
+.slideImg {
+    position: absolute;
+    background-color: var(--Strong-Cyan-Slider-Backround);
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 0px;
+}
+
+.slideImg:active {
+    background-color: var(--StrongCyan-Slider-Backround-2);
+}
+
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.price {
+    color: var(--Grayish-Blue-Text);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.mainPrice {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--Dark-Desaturated-Blue-Text-CTA-Background);
+}
+
+.monthYear {
+    color: var(--Grayish-Blue-Text);
+    font-weight: 600;
+}
+
+.billingSec {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+}
+
+.switch {
+    height: 22px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border: 2px solid var(--Grayish-Blue-Text);
+    width: 40px;
+    border-radius: 25px;
+    background-color: var(--Grayish-Blue-Text);
+}
+
+.switch:hover {
+    opacity: 70%;
+}
+
+.ball {
+    height: 90%;
+    width: 18px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.monthlyBilling,
+.yearlyBilling {
+    color: var(--Grayish-Blue-Text);
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.diccount {
+    position: absolute;
+    right: 0px;
+    color: var(--Light-Red-Discount-Text);
+    background-color: var(--Light-Grayish-Red-Discount-Background);
+    padding: 4px;
+    padding-inline: 6px;
+    font-weight: 700;
+    border-radius: 6px;
+    font-size: 12px;
+}
+
+.last {
+    padding: 40px;
+    width: 100%;
+    border-top: 1px solid rgba(0, 0, 0, 0.164);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ul {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+li {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+}
+
+.btnCover {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lastbtn {
+    font-family: 'manrope', sans-serif;
+    background-color: var(--Dark-Desaturated-Blue-Text-CTA-Background);
+    height: 50px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    width: 70%;
+    border-radius: 25px;
+    border: none;
+    color: hsla(0, 0%, 100%, 0.767);
+    cursor: pointer;
+}
+
+.flexEnd {
+    display: flex;
+    justify-content: end;
+}
+
+.lastbtn:hover {
+    color: var(--White-Pricing-Component-Background);
+}
+
+.priceForMob {
+    display: none;
+}
+.attribution{
+    color: black;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+.attribution a{
+    color: var(--Strong-Cyan-Slider-Backround);
+    margin-block: 20px;
+    text-decoration: none;
+}
+@media(max-width:540px) {
+    body {
+        background-size: auto;
+        gap: 0px;
+
+    }
+
+    .views {
+        display: flex;
+        justify-content: center;
+    }
+
+    .priceForMob {
+        display: flex;
+    }
+
+    .priceForDesk {
+        display: none;
+    }
+
+    main {
+        padding-block: 20px;
+        width: 90%;
+        align-items: center;
+    }
+
+    .head {
+        flex-direction: column;
+    }
+
+    .last {
+        flex-direction: column;
+        gap: 30px;
+        padding: 25px;
+    }
+.diccount{
+    position: unset;
+}
+.billingSec{
+    width: auto;
+}
+.textDiscount{
+    display: none;
+}
+    .ul {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .ul li {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .ul,
+    .btnCover {
+        width: 100%;
+    }
+    .simpleHead{
+        font-size: 1.5rem;
+        font-weight:800 ;
+    }
+    .main-head-relative{
+        align-items: center;
+    }
+    .Sign-upPAra{
+        /* font-size
+        
+        : 0.7rem; */
+        width: 60%;
+        line-height: 2;
+    }
+    .attribution{
+        margin-block: 20px;
+    }
+}
