@@ -379,3 +379,9 @@ li {
         margin-block: 20px;
     }
 }
+
+@media(min-width:767px) and (max-width:1025px){
+main{
+    width: 80%;
+}
+}
